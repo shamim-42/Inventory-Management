@@ -1,11 +1,12 @@
-import { Controller, Get, Req, UseGuards } from '@nestjs/common';
+import { Controller, Get, Query, Req, UseGuards } from '@nestjs/common';
 import { AppService } from './app.service';
 import { AuthGuard } from '@nestjs/passport';
 
 @Controller()
 export class AppController {
   @Get('getInfo')
-  getUserInfo() {
-    return "Bismillah"
+  getUserInfo(@Query() query) {
+    console.log(query);
+    return 'Use this jwt token as Bearer in Graphql query/mutation: ' + query.jwt;
   }
 }
