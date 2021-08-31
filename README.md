@@ -17,7 +17,7 @@
 1. Run the command `npm install`
 1. After installing all of the packages run `npm run start:dev`
 1. Now you can play with the graphql but you need a valid `jwt` token that can be achieved from OAuth authentication (google)
-1. To achieve a jwt token go to `http://localhost:3000/auth/google`. Signin with your gmail account and after successfully signedin you will redirected to a new url. Collect the jwt from the url (ignore the trailing '#')
+1. To achieve a jwt token go to `http://localhost:3000/auth/google`. Signin with your gmail account and after successfully signedin you will redirected to a new url. Collect the jwt from this page.
 1. Now open the browser and go to `localhost:3000/graphql`.
 1. Enjoy your project with `query` or `mutation` in the graphql playground. Your first task should be creating some `Customer` and some `Inventory`.
 
