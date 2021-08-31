@@ -7,7 +7,7 @@
 
 # Inventory Management System Backend (Nestjs + Graphql)
 
-### You can start your Inventory Management Backend project from here. If you need the whole project (including backend RBAC) with frontend then contact me in my mail.
+### You can start your Inventory Management Backend project from here.
 
 ### How to run
 
@@ -173,4 +173,3 @@ query{
 }
 ```
 
-**N.B: A transaction can never be completely deleted. It actually soft deletion. It still remains in the database.**
