@@ -53,12 +53,21 @@ input InvoiceItemsInput {
   qty: Int!
 }
 
+type InvoiceItemsType {
+  id: ID!
+  name: String!
+  code: String!
+  unit_price: Int!
+  description: String!
+  qty: Int!
+}
+
 type InvoiceType {
   id: ID!
   total_amount: Float!
   number_of_product: Int!
   customer: CustomerType
-  invoice_items: [InventoryType!]
+  invoice_items: [InvoiceItemsType!]
 }
 
 type Mutation {

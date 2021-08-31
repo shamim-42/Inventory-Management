@@ -7,11 +7,12 @@ import { AuthService, Provider } from './auth.service';
 export class GoogleStrategy extends PassportStrategy(Strategy, 'google') {
   constructor(private readonly authService: AuthService) {
     super({
-      // Use Env vars here
+      //   // Use Env vars here
       clientID:
         '275497721443-1pajigbb8p7afg4505rh3h5dss5340lh.apps.googleusercontent.com', // <- Replace this with your client id
       clientSecret: 'ybox0BUH5IdYwu20FdkJ1fzw', // <- Replace this with your client secret
       callbackURL: 'http://localhost:3000/auth/redirect',
+
       passReqToCallback: true,
       scope: [
         'https://www.googleapis.com/auth/userinfo.profile',
