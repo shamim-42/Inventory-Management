@@ -1,0 +1,75 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input CustomerInput {
+  name: String!
+  mobile: String!
+  address: String!
+}
+
+input CustomerInputForInvoice {
+  id: String!
+  name: String!
+  mobile: String!
+  address: String!
+}
+
+type CustomerType {
+  id: ID!
+  name: String!
+  mobile: String!
+  address: String!
+}
+
+input InventoryInput {
+  name: String!
+  code: String!
+  unit_price: Int!
+  description: String!
+}
+
+type InventoryType {
+  id: ID!
+  name: String!
+  code: String!
+  unit_price: Int!
+  description: String!
+}
+
+input InvoiceInput {
+  total_amount: Float!
+  number_of_product: Int!
+  customer: CustomerInputForInvoice!
+  invoice_items: [InvoiceItemsInput!]!
+}
+
+input InvoiceItemsInput {
+  id: String!
+  name: String!
+  code: String!
+  unit_price: Int!
+  description: String!
+  qty: Int!
+}
+
+type InvoiceType {
+  id: ID!
+  total_amount: Float!
+  number_of_product: Int!
+  customer: CustomerType
+  invoice_items: [InventoryType!]
+}
+
+type Mutation {
+  createInvoice(input: InvoiceInput!): InvoiceType!
+  createInventories(input: InventoryInput!): InventoryType!
+  createCustomer(input: CustomerInput!): CustomerType!
+}
+
+type Query {
+  hello: String!
+  invoices: [InvoiceType!]!
+  inventory: [InventoryType!]!
+  customer: [CustomerType!]!
+}
