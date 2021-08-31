@@ -1,13 +1,17 @@
-## Technologies:
-
-1. Nestjs 
-2. Graphql (Code First Approach)
-3. Mongodb
-4. OAuth (Google)
-
 # Inventory Management System Backend (Nestjs + Graphql)
 
 ### You can start your Inventory Management Backend project from here.
+
+Authentication implemented with OAuth (but not saving in local database). If you want then develop it.
+
+### Technology Used
+
+1. Nestjs (Nodejs Backend Framework)
+1. Graphql (Code First Approach)
+1. JWT based authentication
+1. Mongodb (Nest's mongoose module is used)
+1. OAuth (google)
+
 
 ### How to run
 
@@ -23,17 +27,6 @@
 
 See the graphql query and mutation documentation below for details.
 
-### Description
-
-Authentication implemented with OAuth (but not saving in local database). If you want then develop it.
-
-### Technology Used
-
-1. Nestjs (Nodejs Backend Framework)
-1. Graphql (Code First Approach)
-1. JWT based authentication
-1. Mongodb (Nest's mongoose module is used)
-1. OAuth (google)
 ### Graphql Query/Mutation Documentation
 
 **1. Create Customer.**
